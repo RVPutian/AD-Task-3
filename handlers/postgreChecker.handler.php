@@ -1,10 +1,12 @@
 <?php
 
-$host = "host.docker.internal";
-$port = "5112";
-$username = "user";
-$password = "password";
-$dbname = "post_db";
+require_once __DIR__ . '/../utils/envSetter.util.php';
+
+$host     = env('POSTGRES_HOST', 'host.docker.internal');
+$port     = env('POSTGRES_PORT', '5112');
+$dbname   = env('POSTGRES_DB', 'post_db');
+$user     = env('POSTGRES_USER', 'user');
+$password = env('POSTGRES_PASSWORD', 'password');
 
 $conn_string = "host=$host port=$port dbname=$dbname user=$username password=$password";
 
