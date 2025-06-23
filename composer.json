@@ -1,0 +1,18 @@
+{
+    "name": "rvput/ad-task-3",
+    "description": "project",
+    "autoload": {
+        "psr-4": {
+            "Rvput\\AdTask3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RVPutian",
+            "email": "rvputian2004@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

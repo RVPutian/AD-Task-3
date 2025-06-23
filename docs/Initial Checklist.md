@@ -6,3 +6,5 @@
     [x] Change `your-email-here@gmail.com`
     [x] You can modify `8000` from `3000` - `9999`
 [x] Test Docker to run
+
+# HOW TO CHECK?

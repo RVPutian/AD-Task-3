@@ -1,4 +1,4 @@
-# Assets
+# Assets // OKOK
 Assets holds the assets used by the web application in the same level. it could be used by the `index.html` or `index.php` file.
 Can be compose of the following but not limited to; `css`, `js`, `images`, `fonts`, etc.
 

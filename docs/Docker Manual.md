@@ -1,4 +1,4 @@
-# Using Docker
+# Using Docker // OKOK
 1. Install Docker
 > Required to have WSL 2, can be found in windows store, for mac i think it has already the wsl
 2. Open your VS Code File
