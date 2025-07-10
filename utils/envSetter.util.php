@@ -1,12 +1,19 @@
 <?php
 
+require_once __DIR__ . '/../bootstrap.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv\Dotenv::createImmutable(BASE_PATH);
 $dotenv->load();
 
-function env($key, $default = null) {
-    return $_ENV[$key] ?? $_SERVER[$key] ?? $default;
-}
+// Distribute the data using array key
+$typeConfig = [
+    'pgHost' => $_ENV['POSTGRES_HOST'],
+    'pgPort' => $_ENV['POSTGRES_PORT'],
+    'pgUser' => $_ENV['POSTGRES_USER'],
+    'pgPassword' => $_ENV['POSTGRES_PASSWORD'],
+    'pgDB' => $_ENV['POSTGRES_DB'],
+    'mongoHost' => $_ENV['MONGO_HOST'],
+    'mongoPort' => $_ENV['MONGO_PORT'],
+    'mongoDB' => $_ENV['MONGO_DB'],
+];

@@ -2,13 +2,13 @@
 
 require_once __DIR__ . '/../utils/envSetter.util.php';
 
-$host     = env('POSTGRES_HOST', 'host.docker.internal');
-$port     = env('POSTGRES_PORT', '5112');
-$dbname   = env('POSTGRES_DB', 'post_db');
-$user     = env('POSTGRES_USER', 'user');
-$password = env('POSTGRES_PASSWORD', 'password');
+$host = $typeConfig['pgHost'];
+$port = $typeConfig['pgPort'];
+$dbname = $typeConfig['pgDB'];
+$user = $typeConfig['pgUser'];
+$password = $typeConfig['pgPassword'];
 
-$conn_string = "host=$host port=$port dbname=$dbname user=$username password=$password";
+$conn_string = "host=$host port=$port dbname=$dbname user=$user password=$password";
 
 $dbconn = pg_connect($conn_string);
 

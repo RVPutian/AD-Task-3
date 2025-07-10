@@ -1,11 +1,12 @@
 <?php
 require_once __DIR__ . '/../utils/envSetter.util.php';
 
-$host = env('MONGO_HOST', 'host.docker.internal');
-$port = env('MONGO_PORT', '27111');
-$db   = env('MONGO_DB', 'mong_db');
+$host = $typeConfig['mongoHost'];
+$port = $typeConfig['mongoPort'];
+$db = $typeConfig['mongoDB'];
+
 try {
-    $mongo = new MongoDB\Driver\Manager("mongodb://host.docker.internal:27111");
+    $mongo = new MongoDB\Driver\Manager("mongodb://{$host}:{$port}");
     $command = new MongoDB\Driver\Command(["ping" => 1]);
     $mongo->executeCommand("admin", $command);
 
