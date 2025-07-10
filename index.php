@@ -4,4 +4,4 @@ require_once 'components/componentGroup/header.php';
 require_once 'components/componentGroup/login.php';
 require_once 'components/componentGroup/error.php';
 
-showError("This is a custom error message!");
+showError("Basta error lng to!");

@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/RVPutian/">
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+    <img src="./assets/img/ditto.gif" alt="Nyebe" width="130" height="100">
   </a>
 
   <h3 align="center">AD-Task-3</h3>
@@ -52,7 +52,18 @@
 
 <!-- The following are just sample -->
 
-AD-Task-3 is a hands-on project focused on integrating PHP with SQL and Docker to build a robust, containerized backend for future web applications. The project guides you through setting up a development environment using Docker Compose, connecting PHP to both PostgreSQL and MongoDB databases.
+AD-task-3 is a full-stack PHP project designed to demonstrate modern web development practices using Docker, PostgreSQL, and MongoDB. The project provides a modular, environment-based PHP backend that supports user authentication, role management, and automated database setup. With Docker Compose, the entire development environment—including PHP, PostgreSQL, and MongoDB services—can be spun up with a single command, ensuring consistency across different machines.
+
+Key features include:
+
+Environment variable management using .env and phpdotenv
+Automated database migration and seeding for PostgreSQL
+Modular PHP structure with clear separation of components, handlers, and utilities
+User authentication with secure password hashing and session management
+Custom error handling and reusable UI components
+Integration with both PostgreSQL (for relational data) and MongoDB (for NoSQL scenarios)
+Ready-to-use Docker Compose setup for easy local development and deployment
+AD-task-3 serves as a robust template for building scalable, secure, and maintainable PHP web applications with modern DevOps and database practices.
 
 ### Key Components
 
