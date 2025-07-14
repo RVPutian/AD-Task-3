@@ -68,4 +68,51 @@ foreach ($users as $u) {
     ]);
 }
 
+// --- SEED PROJECTS ---
+$projects = require DUMMIES_PATH . '/projects.staticData.php';
+echo "Seeding projects…\n";
+$stmt = $pdo->prepare("
+    INSERT INTO projects (id, name)
+    VALUES (:id, :name)
+");
+foreach ($projects as $p) {
+    $stmt->execute([
+        ':id' => $p['id'],
+        ':name' => $p['name'],
+    ]);
+}
+
+// --- SEED PROJECT_USERS ---
+$projectUsers = require DUMMIES_PATH . '/project_users.staticData.php';
+echo "Seeding project_users…\n";
+$stmt = $pdo->prepare("
+    INSERT INTO project_users (project_id, user_id)
+    VALUES (:project_id, :user_id)
+");
+foreach ($projectUsers as $pu) {
+    $stmt->execute([
+        ':project_id' => $pu['project_id'],
+        ':user_id' => $pu['user_id'],
+    ]);
+}
+
+// --- SEED TASKS ---
+$tasks = require DUMMIES_PATH . '/tasks.staticData.php';
+echo "Seeding tasks…\n";
+$stmt = $pdo->prepare("
+    INSERT INTO tasks (id, project_id, assigned_user_id, title, description, status, due_date)
+    VALUES (:id, :project_id, :assigned_user_id, :title, :description, :status, :due_date)
+");
+foreach ($tasks as $t) {
+    $stmt->execute([
+        ':id' => $t['id'],
+        ':project_id' => $t['project_id'],
+        ':assigned_user_id' => $t['assigned_user_id'],
+        ':title' => $t['title'],
+        ':description' => $t['description'],
+        ':status' => $t['status'],
+        ':due_date' => $t['due_date'],
+    ]);
+}
+
 echo "✅ PostgreSQL seeding complete!\n";

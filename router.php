@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/bootstrap.php';
+require BASE_PATH . '/bootstrap.php';
 
 if (php_sapi_name() === 'cli-server') {
     $urlPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -9,4 +9,4 @@ if (php_sapi_name() === 'cli-server') {
     }
 }
 
-require BASE_PATH . '/index.php';
+require_once ERRORS_PATH . '/error.page.php';
