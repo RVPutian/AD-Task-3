@@ -159,3 +159,8 @@ AD-ProjectName
 
 ## Resources
 
+| Title                   | Purpose                                                               | Link                                                                       |
+| ----------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| ChatGPT                 | General AI assistance for planning application architecture and docs. | [https://chat.openai.com](https://chat.openai.com)                         |
+| GitHub Copilot          | In-IDE code suggestions and boilerplate generation.                   | [https://github.com/features/copilot](https://github.com/features/copilot) |
+| YouTube “UI/UX Design”  | Video tutorials on modern web interface layouts and patterns.         |
